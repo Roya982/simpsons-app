@@ -1,0 +1,30 @@
+body{
+    background-color:  #62C8E4;
+    color: #fefb1e;
+    font-family: sans-serif;
+}
+
+main section{
+    background-color: #16a085;
+}
+#homeMain{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#favMain{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+header img{
+    justify-content: flex-start;
+    width: 100px;
+    height: 70px;
+}
+header nav{
+    justify-content: flex-end;
+}

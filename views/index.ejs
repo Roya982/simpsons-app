@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- includes(/layout/header) %>
+</head>
+<body>
+    <header>
+        <%- includes(/layout/header) %>
+    </header>
+    <main id="homeMain">
+        <% Characters.forEach(character=>{ %>
+            <section>
+                <img src="<%=character.image%>" alt="">
+                <h2><%= character.name%></h2>
+                <p><%= character.quote%></p>
+                <form action="/" method="POST">
+                    <input type="hidden" name="img" value="<%=character.image%>">
+                    <input type="hidden" name="name" value="<%= character.name%>">
+                    <input type="hidden" name="quote" value="<%= character.quote%>">
+                    <input type="submit" value="add to fav">
+                </form>
+            </section>
+        <% })  %>
+    </main>
+</body>
+</html>
